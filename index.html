@@ -1,2 +1,31 @@
-Md. Thamedul Islam
-
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script>
+class Students{
+	constructor(name,age,cls){
+		this.myname = name;
+		this.myage = age;
+		this.mycls = cls;
+	}
+		biodata(){
+			return`Hi my name is ${this.myname}. my age is ${this.myage} years old and I am in class ${this.mycls}`;
+		}
+}
+class Player extends Students {
+	constructor(name,age,cls,game){
+				super(name,age,cls);
+				this.mygame = game;
+	}
+	player_biodata(){
+		return`${super.biodata()}. I am player of ${this.mygame}`;
+	}
+}
+let obj1 = new Player('Rafi',8,'One','Football');
+console.log(obj1.player_biodata());
+</script>
+</body>
+</html>
